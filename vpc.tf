@@ -1,7 +1,7 @@
-module "vpc" {
-    source  = "terraform-google-modules/network/google"
-    version = "~> 3.0"
-
+module "network" {
+  source  = "app.terraform.io/jon-acme/network/google"
+  version = "3.4.0"
+  # insert required variables here
     project_id   = var.project
     network_name = "jone-vpc"
     routing_mode = "GLOBAL"
@@ -13,4 +13,4 @@ module "vpc" {
     subnet_region = var.region
   }
 ]
-}
+  }
